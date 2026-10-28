@@ -1,8 +1,16 @@
-# Discord Badge Farmer
+<p align="center">
+  <img src="assets/banner.png" alt="Discord Badge Farmer" width="100%">
+</p>
 
 A small Windows script that grows Discord's **Game Variety** badge (Sampler → … → Universalist, 100+ games) by running dummy executables that the Discord desktop app detects as real games.
 
-Tested: reached **Universalist (129 games)** in about two days.
+## Results
+
+<p align="center">
+  <img src="assets/universalist.png" width="320" alt="Universalist badge, 129 games played">
+</p>
+
+<p align="center"><b>Universalist</b>: 129 games, unlocked in about two days.</p>
 
 ## How it works
 
@@ -32,7 +40,7 @@ In Discord settings, make sure these are on:
 # Check that detection works: runs one game until you press Enter
 python discord_badge_farmer.py --test
 
-# Full run (defaults: ~105 games, one at a time, 7 minutes each ≈ 12 hours)
+# Full run (defaults: ~105 games, one at a time, 15 seconds each ≈ 30 minutes)
 python discord_badge_farmer.py
 ```
 
@@ -42,7 +50,7 @@ python discord_badge_farmer.py
 | --- | --- | --- |
 | `--games` | 105 | Number of games to run (a few extra as buffer) |
 | `--batch` | 1 | Games running at once. Discord seems to count only one at a time, so keep it at 1 |
-| `--seconds` | 420 | How long each game stays open. It needs to last through at least one heartbeat (~5 min) |
+| `--seconds` | 15 | How long each game stays open. 15 seconds is enough for a game to count |
 | `--test` | — | Run a single game until you press Enter |
 
 ## Notes

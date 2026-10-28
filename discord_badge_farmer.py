@@ -105,7 +105,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--games", type=int, default=105, help="how many games to run (a few extra as buffer)")
     p.add_argument("--batch", type=int, default=1, help="games running at the same time (1 is safest)")
-    p.add_argument("--seconds", type=int, default=420, help="how long each game stays open (~7 min covers one heartbeat)")
+    p.add_argument("--seconds", type=int, default=15, help="how long each game stays open (15s is enough to count)")
     p.add_argument("--test", action="store_true", help="run ONE well-known game until you press Enter")
     args = p.parse_args()
 
